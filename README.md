@@ -7,3 +7,5 @@ Para instalar las dependencias del archivo package.json
 Seguido:
 ### `npm start`
 Para correr la aplicación en desarrollo de forma local (http://localhost:3000)
+
+URL a la pagina: https://buscador-rick-morty.web.app/
