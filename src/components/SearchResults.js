@@ -10,12 +10,7 @@ export default function SearchResults(props) {
         <div className="row">
           {characterList.map((character, i) => {
             return (
-              <CharacterCard
-                key={character.id}
-                img={character.image}
-                name={character.name}
-                url={character.url}
-              />
+              <CharacterCard key={character.id} characterInfo={character} />
             );
           })}
         </div>

@@ -6,7 +6,7 @@ import SearchResults from "../components/SearchResults";
 
 export default function Home() {
   const [characterList, setCharacterList] = useState("");
-  const [query, setQuery] = useState(0);
+  const [query, setQuery] = useState("");
   const [url, setUrl] = useState("https://rickandmortyapi.com/api/character");
   const [error, setError] = useState({ error: false, errorMessage: "" });
   const [loading, setLoading] = useState(false);

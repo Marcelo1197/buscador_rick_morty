@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+import { CharacterContext } from "../context/CharacterContext";
 
-export default function CharacterCard(props) {
+export default function CharacterCard({ characterInfo }) {
+  const handleClickCharacter = useContext(CharacterContext);
+
   return (
-    <div className="col-3">
-      <div className="item ">
-        <img src={props.img} alt="" className="pic img-fluid" />
-        <h4 className="characterName">{props.name}</h4>
-        <p>¿Está vivo? {props.status === "Alive" ? "SI" : "NO"}</p>
-      </div>
+    <div className="col-5 col-md-3 col-lg-4">
+      <Link
+        to="/character"
+        onClick={() => handleClickCharacter(characterInfo.id)}
+      >
+        <div className="card ">
+          <img src={characterInfo.image} alt="" className="pic img-fluid" />
+          <h4 className="characterName">{characterInfo.name}</h4>
+        </div>
+      </Link>
     </div>
   );
 }
